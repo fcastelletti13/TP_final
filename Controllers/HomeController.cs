@@ -17,8 +17,12 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult Primera()
+    {
+        return View();
+    }
 
-    public IActionResult Privacy()
+    public IActionResult Foro()
     {
         return View();
     }
