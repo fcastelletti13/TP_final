@@ -38,3 +38,24 @@ h1,h2,h3,h4,h5,a{
 .barra{
   background-color: rgb(34, 34, 34) !important;
 }
+
+.th-equipo{
+  border: 0;
+
+}
+table{
+  border-radius: 10px;
+
+  }
+  tr{
+    border-radius: 10em;
+  }
+ 
+    .submenu{
+       display: none;
+       position: absolute;
+     }
+     
+     .linkprod:hover ~ .submenu {
+       display: block;
+     }
