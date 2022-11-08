@@ -21,7 +21,14 @@ public class HomeController : Controller
     {
         return View();
     }
-
+    public IActionResult Partidos()
+    {
+        return View();
+    }
+public IActionResult Tablas()
+    {
+        return View();
+    }
     public IActionResult Foro()
     {
         return View();

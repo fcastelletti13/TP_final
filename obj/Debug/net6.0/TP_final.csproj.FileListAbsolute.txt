@@ -50,3 +50,29 @@ C:\Users\46959279\Desktop\TPFINAL\TP_final\obj\Debug\net6.0\refint\TP_final.dll
 C:\Users\46959279\Desktop\TPFINAL\TP_final\obj\Debug\net6.0\TP_final.pdb
 C:\Users\46959279\Desktop\TPFINAL\TP_final\obj\Debug\net6.0\TP_final.genruntimeconfig.cache
 C:\Users\46959279\Desktop\TPFINAL\TP_final\obj\Debug\net6.0\ref\TP_final.dll
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\bin\Debug\net6.0\appsettings.json
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\bin\Debug\net6.0\TP_final.staticwebassets.runtime.json
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\bin\Debug\net6.0\TP_final.exe
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\bin\Debug\net6.0\TP_final.deps.json
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\bin\Debug\net6.0\TP_final.runtimeconfig.json
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\bin\Debug\net6.0\TP_final.dll
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\bin\Debug\net6.0\TP_final.pdb
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\TP_final.csproj.AssemblyReference.cache
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\TP_final.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\TP_final.AssemblyInfoInputs.cache
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\TP_final.AssemblyInfo.cs
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\TP_final.csproj.CoreCompileInputs.cache
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\TP_final.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\TP_final.RazorAssemblyInfo.cache
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\TP_final.RazorAssemblyInfo.cs
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\scopedcss\bundle\TP_final.styles.css
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\scopedcss\projectbundle\TP_final.bundle.scp.css
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\TP_final.dll
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\refint\TP_final.dll
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\TP_final.pdb
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\TP_final.genruntimeconfig.cache
+C:\Users\46959279\Desktop\Nueva carpeta\TP_final\obj\Debug\net6.0\ref\TP_final.dll

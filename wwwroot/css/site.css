@@ -49,6 +49,7 @@ table{
   }
   tr{
     border-radius: 10em;
+    
   }
  
     .submenu{
@@ -59,3 +60,24 @@ table{
      .linkprod:hover ~ .submenu {
        display: block;
      }
+     .th-tablas{
+      border-top-color: rgba(255, 0, 0, 0);
+      border-right-color: rgba(255, 0, 0, 0);
+      border-bottom-color: rgba(179, 179, 179, 0.493);
+      border-left-color: rgba(255, 0, 0, 0);   
+    }
+
+    .dropdown-item:hover
+    {
+      background-color: white;
+      color: black !important;
+    }
+    .th-mp{
+      border-top-color: rgba(255, 0, 0, 0);
+      border-right-color: rgba(255, 0, 0, 0);
+      border-bottom-color: rgba(179, 179, 179, 0.493);
+      border-left-color: rgba(255, 0, 0, 0);   
+    }
+    .persona{
+      color: aqua !important;
+    }
