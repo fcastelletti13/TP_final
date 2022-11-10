@@ -16,7 +16,7 @@ html {
 
 body {
   margin-bottom: 60px;
-  background-color: black !important;
+  background-color: rgb(15, 15, 15) !important;
 
 }
 table,td,th {
@@ -81,3 +81,16 @@ table{
     .persona{
       color: aqua !important;
     }
+
+    button{
+  color: inherit !important;
+}
+.h6-is{
+  color: rgba(214, 214, 214, 0.767);
+}
+
+.cuadrado-form {
+  width: 30%;          
+  background: rgb(32, 32, 32);       
+  margin-bottom: 3px;
+}
