@@ -23,9 +23,10 @@ table,td,th {
 	border: 1px solid beige;
 }
 .cuadrado {
-  width: 900%;          
-  background: rgb(133, 133, 133);       
-  border: 1px solid rgb(85, 85, 85);
+  width: 90%;          
+  background: rgb(32, 32, 32);       
+  border-right: 1px solid rgb(85, 85, 85);
+  border-left: 1px solid rgb(85, 85, 85);
   margin-bottom: 3px;
 }
 h1,h2,h3,h4,h5,a{
@@ -93,4 +94,21 @@ table{
   width: 30%;          
   background: rgb(32, 32, 32);       
   margin-bottom: 3px;
+}
+.cuadrado-subir{
+  width: 90%;          
+  background: rgb(32, 32, 32);  
+  border-bottom: 1px solid rgb(85, 85, 85);
+  border-right: 1px solid rgb(85, 85, 85);
+  border-left: 1px solid rgb(85, 85, 85);
+  margin-bottom: 3px;
+}
+.form-subir{
+  color: white;
+  background-color: transparent !important;
+  
+}
+.comentario{
+  
+  border-bottom: 1px solid rgb(85, 85, 85);
 }
