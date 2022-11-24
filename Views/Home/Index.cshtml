@@ -8,6 +8,7 @@
         <div class="col-5">
             <h2>Mejores partidos</h2>
             <table class="table  table-dark">
+               
                 <thead>
                     <tr>
                         <th scope="col-1" class="th-mp">River</th>
@@ -17,26 +18,7 @@
 
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <th scope="col-1" class="th-mp">Central</th>
-                        <th scope="col-1" class="th-mp">0</th>
-                        <th scope="col-1" class="th-mp">0</th>
-                     <th scope="col-1" class="th-mp">Newell´s</th>
-                    </tr>
-                    <tr>
-                        <th scope="col-1" class="th-mp">Gimnasia</th>
-                        <th scope="col-1" class="th-mp">0</th>
-                        <th scope="col-1" class="th-mp">0</th>
-                     <th scope="col-1" class="th-mp">Estudiantes</th>
-                    </tr>
-                    <tr>
-                        <th scope="col-1" class="th-mp">Velez</th>
-                        <th scope="col-1" class="th-mp">0</th>
-                        <th scope="col-1" class="th-mp">0</th>
-                     <th scope="col-1" class="th-mp">Huracan</th>
-                    </tr>
-                </tbody>
+               
             </table>
         </div>
     
@@ -51,21 +33,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row" class="th-tablas">1</th>
-                    <td class="th-tablas">Retegui</td>
-                    <td class="th-tablas">19</td>
+                @for (int i = 1; i <= 3; i++)
+                {
+                    <tr>
+                    <th scope="row" class="th-tablas">@i</th>
+                    <td class="th-tablas">@ViewBag.Goleadores[i-1].NombreApellido</td>
+                    <td class="th-tablas">@ViewBag.Goleadores[i-1].Goles</td>
                 </tr>
-                <tr>
-                    <th scope="row" class="th-tablas">2</th>
-                    <td class="th-tablas"> Copetti</td>
-                    <td class="th-tablas">11</td>
-                </tr>
-                <tr>
-                    <th scope="row" class="th-tablas">3</th>
-                    <td class="th-tablas">Borja</td>
-                    <td class="th-tablas">9</td>
-                </tr>
+                }
+
             </tbody>
         </table>
     </div>

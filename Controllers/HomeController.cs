@@ -15,6 +15,8 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewBag.Goleadores = BD.ListarGoleadores();
+        ViewBag.Asistidores = BD.ListarAsistidores();
         return View();
     }
      public IActionResult IniciarSesion()
@@ -27,10 +29,13 @@ public class HomeController : Controller
     }
     public IActionResult Partidos()
     {
+        ViewBag.ListarPartidos = BD.ListarPartidos();
         return View();
     }
-public IActionResult Tablas()
+    public IActionResult Tablas()
     {
+        ViewBag.Goleadores = BD.ListarGoleadores();
+        ViewBag.ListaEquipos = BD.ListarEquipos();
         return View();
     }
     public IActionResult Foro()
