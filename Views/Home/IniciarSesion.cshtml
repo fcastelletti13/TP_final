@@ -2,17 +2,18 @@
     ViewData["Title"] = "Partidos";
 }
 
-
-<form class="d-flex justify-content-center " method="post" action='@Url.Action()'>
-   <div class="row cuadrado-form">
-        <div class="col-8"> 
+<span>@ViewBag.mensaje</span>
+<form class="d-flex justify-content-center " method="post" enctype="multipart/form-data" action='@Url.Action("ValidarInicio")'>
+    <div class="row cuadrado-form">
+        <div class="col-8">
             <h6 class="h6-is">Ingrese nombre de usuario</h6>
-    
-<input type="text" name="nombre" placeholder="Ingrese nombre de usuario" size="30">
-<h6 class="h6-is">Ingrese Contraseña</h6>
-<input type="text" name="nombre" placeholder="Ingrese nombre de usuario" size="30">
-
-<input type="submit" value="Aceptar">
-</div>
-</div>
+            <input type="text" name="nombre" placeholder="Ingrese nombre de usuario" size="30">
+            <h6 class="h6-is">Ingrese Contraseña</h6>
+            <input type="text" name="contrasena" placeholder="Ingrese contraseña" size="30">
+            <button type="submit">Iniciar Sesión</button>
+        </div>
+    </div>
+    @if(ViewBag.mensaje ==  String.Empty){
+        <span>@ViewBag.mensaje</span>
+    }
 </form>

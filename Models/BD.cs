@@ -49,6 +49,7 @@ public static class BD
         }
         return ListaPosts;
     }
+
     public static List<Partido> ListarPartidos()
     {
         List<Partido> ListaPartidos = new List<Partido>();
@@ -58,5 +59,15 @@ public static class BD
             ListaPartidos = bd.Query<Partido>(sql).ToList();
         }
         return ListaPartidos;
+    }
+    public static List<Usuario> ListarUsuarios()
+    {
+        List<Usuario> ListaUsuarios = new List<Usuario>();
+        using (SqlConnection bd = new SqlConnection(_connectionString))
+        {
+            string sql = $"SELECT * FROM Usuarios";
+            ListaUsuarios = bd.Query<Usuario>(sql).ToList();
+        }
+        return ListaUsuarios;
     }
 }

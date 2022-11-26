@@ -13,14 +13,36 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult Index(Usuario usuario = null)
     {
+        if (usuario == null)
+        {
+            usuario = new Usuario();
+            usuario.Foto = "no_profile_picture.png";
+        }
+        ViewBag.Usuario = usuario;
         ViewBag.Goleadores = BD.ListarGoleadores();
         ViewBag.Asistidores = BD.ListarAsistidores();
         return View();
     }
-     public IActionResult IniciarSesion()
+
+
+    [HttpPost] public IActionResult ValidarInicio(string nombre, string contrasena)
     {
+        List<Usuario> ListaUsuarios = BD.ListarUsuarios();
+        foreach (Usuario item in ListaUsuarios)
+        {
+            if (nombre == item.Nombre && contrasena == item.Contraseña)
+            {
+                return RedirectToAction("Index", new{usuario = item});
+            }
+        }
+        return RedirectToAction("IniciarSesion", new{mensaje = "Usuario o contraseña incorrecta"});
+    }
+    public IActionResult IniciarSesion(string mensaje = "")
+    {
+        
+        ViewBag.mensaje = mensaje;
         return View();
     }
     public IActionResult Primera()

@@ -116,3 +116,10 @@ table{
   display: flex;
   flex-direction: row;
 }
+.form-subir{
+  border-color: transparent;}
+
+.boton-sesion{
+  background-color:transparent;
+  border-color: transparent;
+}

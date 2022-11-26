@@ -7,14 +7,14 @@ public class Usuario
 {
     private int _idUsuario;
     private string _nombre;
-    private string _contrasenia;
+    private string _contraseña;
     private string _foto;
     public Usuario(){}
-    public Usuario(int idUsuario, string nombre, string contrasenia , string foto)
+    public Usuario(int idUsuario, string nombre, string contraseña , string foto)
     {
         _idUsuario = idUsuario;
         _nombre = nombre;
-        _contrasenia = contrasenia;
+        _contraseña = contraseña;
         _foto = foto;
     }
     public int idUsuario
@@ -27,10 +27,10 @@ public class Usuario
         get { return _nombre; }
         set { _nombre = value; }
     }
-    public string Contrasenia
+    public string Contraseña
     {
-        get { return _contrasenia; }
-        set { _contrasenia = value; }
+        get { return _contraseña; }
+        set { _contraseña = value; }
     }
     public string Foto
     {
