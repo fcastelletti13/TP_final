@@ -1,8 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-        int count1 = 1;
-
+    int count1 = 1;
 }
+<button class="d-none" id="btn-imgusuario" onclick="MostrarFotoUsuario('@ViewBag.Usuario.Foto', '@ViewBag.Usuario.Nombre')"></button>
 
 <div class="text-center">
     <div class="row">
@@ -15,8 +15,7 @@
                         <th scope="col-1" class="th-tablas">Nombre</th>
                         <th scope="col-1" class="th-tablas">PJ</th>
                         <th scope="col-1" class="th-tablas">DG</th>
-
-                     <th scope="col-1" class="th-tablas">PTS</th>
+                        <th scope="col-1" class="th-tablas">PTS</th>
 
                     </tr>
                 </thead>
@@ -28,9 +27,7 @@
                     <td class="th-tablas">@item.Nombre</td>
                     <td class="th-tablas">@item.PJ</td>
                     <td class="th-tablas">@item.DG</td>
-                                        <td class="th-tablas">@item.Pts</td>
-
-
+                    <td class="th-tablas">@item.Pts</td>
                 </tr>
                 count1++;
             }

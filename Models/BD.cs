@@ -7,7 +7,7 @@ using Dapper;
 public static class BD
 {
     /*LISTAR*/
-    private static string _connectionString = @"Server=DESKTOP-M15HFS0\SQLEXPRESS;DataBase=DBFutbol;Trusted_Connection=True";
+    private static string _connectionString = @"Server=localhost;DataBase=DBFutbol;Trusted_Connection=True";
 
     public static List<Equipo> ListarEquipos()
     {
@@ -69,5 +69,15 @@ public static class BD
             ListaUsuarios = bd.Query<Usuario>(sql).ToList();
         }
         return ListaUsuarios;
+    }
+    public static Usuario ListarUnUsuario(int idUsuario)
+    {
+        Usuario usuario = new Usuario();
+        using (SqlConnection bd = new SqlConnection(_connectionString))
+        {
+            string sql = $"SELECT * FROM Usuarios WHERE IdUsuario = {idUsuario}";
+            usuario = bd.QueryFirstOrDefault<Usuario>(sql);
+        }
+        return usuario;
     }
 }

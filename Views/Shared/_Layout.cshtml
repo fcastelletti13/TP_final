@@ -38,8 +38,11 @@
             </li>
           </ul>
              <button class="boton-sesion">
-              <a href='@Url.Action("IniciarSesion","Home")'> <img id="imgusuario">
-              </a>
+              <div class="imgnom">
+                <a href='@Url.Action("IniciarSesion","Home")'><img id="imgusuario"></a>
+                <span id="nombreusuario"></span>
+              </div>
+              
             </button>
             @*<button class="boton-sesion">
               <a href='@Url.Action("IniciarSesion","Home")'> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" 

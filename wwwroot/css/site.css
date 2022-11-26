@@ -123,3 +123,11 @@ table{
   background-color:transparent;
   border-color: transparent;
 }
+
+#imgusuario{
+  height: 3rem;
+}
+
+#nombreusuario{
+  color: coral;
+}

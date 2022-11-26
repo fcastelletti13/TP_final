@@ -482,19 +482,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ramiro\\.nuget\\packages\\": {}
+    "C:\\Users\\Apple uwu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ramiro\\Documents\\GitHub\\TP_final\\TP_final.csproj",
+      "projectUniqueName": "F:\\Descargas\\TP_final\\TP_final.csproj",
       "projectName": "TP_final",
-      "projectPath": "C:\\Users\\Ramiro\\Documents\\GitHub\\TP_final\\TP_final.csproj",
-      "packagesPath": "C:\\Users\\Ramiro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ramiro\\Documents\\GitHub\\TP_final\\obj\\",
+      "projectPath": "F:\\Descargas\\TP_final\\TP_final.csproj",
+      "packagesPath": "C:\\Users\\Apple uwu\\.nuget\\packages\\",
+      "outputPath": "F:\\Descargas\\TP_final\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ramiro\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Apple uwu\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -545,7 +545,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
