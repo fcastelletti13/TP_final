@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FdKDi/GNyOinvjUBheuEFr3f1G7MuNbNOXOgW0DSxMk=",
+  "Hash": "YbxqB4I6KxVZdYEJ6ppKas0LCo3vs5iGSCEweOapv6Y=",
   "Source": "TP_final",
   "BasePath": "_content/TP_final",
   "Mode": "Default",
@@ -85,6 +85,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\Ramiro\\Documents\\GitHub\\TP_final\\wwwroot\\img\\escudos\\boca.png",
+      "SourceId": "TP_final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ramiro\\Documents\\GitHub\\TP_final\\wwwroot\\",
+      "BasePath": "_content/TP_final",
+      "RelativePath": "img/escudos/boca.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\escudos\\boca.png"
+    },
+    {
       "Identity": "C:\\Users\\Ramiro\\Documents\\GitHub\\TP_final\\wwwroot\\img\\no_profile_picture.png",
       "SourceId": "TP_final",
       "SourceType": "Discovered",
@@ -100,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\no_profile_picture.png"
+    },
+    {
+      "Identity": "C:\\Users\\Ramiro\\Documents\\GitHub\\TP_final\\wwwroot\\img\\usuarios\\Aaaaa.jpg",
+      "SourceId": "TP_final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ramiro\\Documents\\GitHub\\TP_final\\wwwroot\\",
+      "BasePath": "_content/TP_final",
+      "RelativePath": "img/usuarios/Aaaaa.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\usuarios\\Aaaaa.jpg"
     },
     {
       "Identity": "C:\\Users\\Ramiro\\Documents\\GitHub\\TP_final\\wwwroot\\img\\usuarios\\no_profile_picture.png",
@@ -168,6 +202,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\usuarios\\WhatsApp Image 2022-11-27 at 16.36.00.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Ramiro\\Documents\\GitHub\\TP_final\\wwwroot\\img\\usuarios\\WhatsApp Image 2022-11-27 at 16.36.06.jpeg",
+      "SourceId": "TP_final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ramiro\\Documents\\GitHub\\TP_final\\wwwroot\\",
+      "BasePath": "_content/TP_final",
+      "RelativePath": "img/usuarios/WhatsApp Image 2022-11-27 at 16.36.06.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\usuarios\\WhatsApp Image 2022-11-27 at 16.36.06.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Ramiro\\Documents\\GitHub\\TP_final\\wwwroot\\img\\usuarios\\WhatsApp Video 2022-11-26 at 15.34.04.mp4",
+      "SourceId": "TP_final",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ramiro\\Documents\\GitHub\\TP_final\\wwwroot\\",
+      "BasePath": "_content/TP_final",
+      "RelativePath": "img/usuarios/WhatsApp Video 2022-11-26 at 15.34.04.mp4",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\usuarios\\WhatsApp Video 2022-11-26 at 15.34.04.mp4"
     },
     {
       "Identity": "C:\\Users\\Ramiro\\Documents\\GitHub\\TP_final\\wwwroot\\img\\usuarios\\yoBUENA.png",

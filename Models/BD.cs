@@ -51,9 +51,16 @@ public static class BD
     }
     public static void AgregarPost(Post post){
 
-        string sql = $"Insert into Posts([TextoPost], [IdUsuario], [FechaCreacion]) VALUES ('{post.TextoPost}',{post.Usuario},@FechaCreacion)";
+        string sql = $"Insert into Posts([TextoPost], [IdUsuario], [FechaCreacion], [Foto]) VALUES ('{post.TextoPost}',{post.IdUsuario},@FechaCreacion, '{post.Foto}')";
         using (SqlConnection bd = new SqlConnection(_connectionString)){
             bd.Execute(sql,new {FechaCreacion = post.FechaCreacion});
+        }
+    }
+     public static void EliminarPost(int IdPost){
+
+        string sql = $"Delete From Posts Where IdPost = '{IdPost}'";
+        using (SqlConnection bd = new SqlConnection(_connectionString)){
+            bd.Execute(sql);
         }
     }
 
@@ -86,6 +93,27 @@ public static class BD
             usuario = bd.QueryFirstOrDefault<Usuario>(sql);
         }
         return usuario;
+    }
+
+    public static Jugador ListarUnJugador(int idJugador)
+    {
+        Jugador jugador = new Jugador();
+        using (SqlConnection bd = new SqlConnection(_connectionString))
+        {
+            string sql = $"SELECT * FROM Jugadores WHERE IdJugador = {idJugador}";
+            jugador = bd.QueryFirstOrDefault<Jugador>(sql);
+        }
+        return jugador;
+    }
+    public static Equipo ListarUnEquipo(int idEquipo)
+    {
+        Equipo equipo = new Equipo();
+        using (SqlConnection bd = new SqlConnection(_connectionString))
+        {
+            string sql = $"SELECT * FROM Equipos WHERE IdEquipo = {idEquipo}";
+            equipo = bd.QueryFirstOrDefault<Equipo>(sql);
+        }
+        return equipo;
     }
     public static int AgregarUsuario(Usuario usuario)
     {

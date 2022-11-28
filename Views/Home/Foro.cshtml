@@ -6,12 +6,20 @@
 
 <form class="d-flex justify-content-center" method="post" enctype="multipart/form-data"
     action='@Url.Action("AgregarPost")'>
-    <div class="row cuadrado-subir">
-        <div class="col-8">
-            <textarea class="form-control form-subir " rows="3" name="post.extoPost" placeholder="¿Que querés subir?" style="color: white;" required></textarea>
+    <div class="row cuadrado-subir ">
+        <div class="col-12">
+            <textarea class="form-control form-subir " rows="3" name="post.TextoPost" placeholder="¿Que querés subir?"
+                style="color: white;" required></textarea>
             <input type="file" class="form-control" name="MyFile" required>
-            <input class="d-none"name="post.usuario" value="@ViewBag.Usuario.idUsuario">
-            <button type="submit" class="btn btn-primary">Subir</button>
+            <input class="d-none" name="post.IdUsuario" value="@ViewBag.Usuario.idUsuario">
+            @if (ViewBag.Usuario.idUsuario == -1)
+            {
+                <button type="submit" class="btn btn-primary" disabled>Subir</button>
+            }
+            else
+            {
+                <button type="submit" class="btn btn-primary">Subir</button>
+            }
         </div>
     </div>
 </form>
@@ -21,9 +29,33 @@
         {
             <div class="comentario">
                 <div class="imgnom">
-                    <img src="/wwwroot/img/usuarios/@item.Foto" class="Perfil"/>
-                    <h2>@ViewBag.Usuario.Foto</h2>
-                    <h4>@item.TextoPost</h4>
+                    <div class="row">
+                        <div class="col-md-1 col-sm-2">
+                            <img src="/img/usuarios/@item.Usuario.Foto" class="imgpost">
+                        </div>
+                        <div class="col-md-4 col-sm-2">
+                            <h2>@item.Usuario.Nombre</h2>
+                        </div>
+                        <h4>@item.TextoPost</h4>
+                        <img src="/img/usuarios/@item.Foto" class="Perfil" style="height: 13rem;">
+
+                        <form method="post" enctype="multipart/form-data" action='@Url.Action("EliminarPost")'>
+                        @if (item.Usuario.idUsuario == ViewBag.usuario.idUsuario)
+                        {
+                            <button type="submit" class="btn btn-danger">Eliminar</button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-danger" disabled> Eliminar</button>
+                        }
+                            <input type="text" class="form-control d-none" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" name="IdPost" value="@item.IdPost" required>
+                        </form>
+                        
+                           
+                        
+                        
+                    </div>
                 </div>
             </div>
         }

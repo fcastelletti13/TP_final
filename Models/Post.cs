@@ -8,17 +8,23 @@ public class Post
     private int _idPost;
     private string _textoPost;
     private DateTime _fechaCreacion;
-    private string _usuario;
+    private int _idUsuario;
     private string _foto;
+    private Usuario _usuario;
     public Post(){}
-    public Post(int idPost, string textoPost, DateTime fechaCreacion, string usuario, string foto)
+    public Post(int idPost, string textoPost, DateTime fechaCreacion, int idUsuario, string foto, Usuario usuario)
     {
         _idPost = idPost;
         _textoPost = textoPost;
         _fechaCreacion = fechaCreacion;
-        _usuario = usuario;
+        _idUsuario = idUsuario;
         _foto = foto;
         
+    }
+    public Usuario Usuario
+    {
+        get { return _usuario; }
+        set { _usuario = value; }
     }
     public int IdPost
     {
@@ -35,10 +41,10 @@ public class Post
         get { return _fechaCreacion; }
         set { _fechaCreacion = value; }
     }
-    public string Usuario
+    public int IdUsuario
     {
-        get { return _usuario; }
-        set { _usuario = value; }
+        get { return _idUsuario; }
+        set { _idUsuario = value; }
     }
     public string Foto
     {

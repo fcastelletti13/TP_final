@@ -151,8 +151,18 @@ tr {
   border-color:coral;
   cursor: pointer;
 }
+.imgpost{
+  height: 36%;
+  border-radius: 100%;
+  border: 2px solid;
+  border-color:blue;
+}
 
 #nombreusuario {
   text-align: center;
   color: coral;
+}
+
+.table-center{
+  vertical-align: middle;
 }

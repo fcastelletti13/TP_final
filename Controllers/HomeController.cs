@@ -41,17 +41,30 @@ public class HomeController : Controller
         ViewBag.ListaEquipos = BD.ListarEquipos();
         return View();
     }
+    public Jugador DevolverJugador(int id)
+    {
+        Jugador jugador = BD.ListarUnJugador(id);
+        return jugador;
+    }
     public IActionResult Foro()
     {
         ViewBag.Usuario = usuarioActivo;
-        ViewBag.ListaPosts =  BD.ListarPosts();
+        List<Post> ListaPosts =  BD.ListarPosts();
+        foreach (Post item in ListaPosts) item.Usuario = BD.ListarUnUsuario(item.IdUsuario);
+        
+        ViewBag.ListaPosts = ListaPosts;
         return View();
     }
-   [HttpPost]public IActionResult AgregarPost(Post post, IFormFile MyFile){
+    [HttpPost] public IActionResult AgregarPost(Post post, IFormFile MyFile)
+    {
         post.Foto = MyFile.FileName;
         using (var stream = System.IO.File.Create(this._environment.WebRootPath + @"\img\usuarios\" + MyFile.FileName)) MyFile.CopyTo(stream);
         post.FechaCreacion = DateTime.Now;
         BD.AgregarPost(post);
+        return RedirectToAction("Foro");
+    }
+    public IActionResult EliminarPost(int IdPost){
+        BD.EliminarPost(IdPost);
         return RedirectToAction("Foro");
     }
     public IActionResult CerrarSesion()
@@ -64,6 +77,11 @@ public class HomeController : Controller
     {
         Usuario usuario = BD.ListarUnUsuario(id);
         return usuario;
+    }
+    public Equipo DevolverEquipo(int id)
+    {
+        Equipo equipo = BD.ListarUnEquipo(id);
+        return equipo;
     }
     [HttpPost] public IActionResult ValidarInicio(string nombre, string contrasena)
     {

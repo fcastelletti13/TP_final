@@ -1,56 +1,59 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<button class="d-none" id="btn-imgusuario" onclick="MostrarFotoUsuario('@ViewBag.Usuario.Foto', '@ViewBag.Usuario.Nombre', '@ViewBag.Usuario.idUsuario')"></button>
+<button class="d-none" id="btn-imgusuario"
+    onclick="MostrarFotoUsuario('@ViewBag.Usuario.Foto', '@ViewBag.Usuario.Nombre', '@ViewBag.Usuario.idUsuario')"></button>
 
 <div class="text-center">
     <h1 class="blanco">Lo más destacado</h1>
     <div class="row">
-        <div class="col-5">
-            <h2>Mejores partidos</h2>
-            <table class="table  table-dark">
-               
-                <thead>
-                    <tr>
-                        <th scope="col-1" class="th-mp">River</th>
-                        <th scope="col-1" class="th-mp">0</th>
-                        <th scope="col-1" class="th-mp">0</th>
-                     <th scope="col-1" class="th-mp">Boca</th>
+        <div class="d-flex justify-content-center">
+            <div class="col-5">
+                <h2>Mejores partidos</h2>
+                <table class="table  table-dark">
 
-                    </tr>
-                </thead>
-               
-            </table>
+                    <thead>
+                        <tr>
+                            <th scope="col-1" class="th-mp">River</th>
+                            <th scope="col-1" class="th-mp">0</th>
+                            <th scope="col-1" class="th-mp">0</th>
+                            <th scope="col-1" class="th-mp">Boca</th>
+
+                        </tr>
+                    </thead>
+
+                </table>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-md-5 col-sm-9">
+                <h2>Goleadores</h2>
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="th-tablas">#</th>
+                            <th scope="col" class="th-tablas">Jugador</th>
+                            <th scope="col" class="th-tablas">Goles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 1; i <= 3; i++)
+                        {
+                            <tr>
+                                <th scope="row" class="th-tablas">@i</th>
+                                <td class="th-tablas">@ViewBag.Goleadores[i-1].NombreApellido</td>
+                                <td class="th-tablas">@ViewBag.Goleadores[i-1].Goles</td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
         </div>
-    
-    <div class="col-5">
-        <h2>Goleadores</h2>
-        <table class="table table-dark">
-            <thead>
-                <tr>
-                    <th scope="col" class="th-tablas">#</th>
-                    <th scope="col" class="th-tablas">Jugador</th>
-                    <th scope="col" class="th-tablas">Goles</th>
-                </tr>
-            </thead>
-            <tbody>
-                @for (int i = 1; i <= 3; i++)
-                {
-                    <tr>
-                    <th scope="row" class="th-tablas">@i</th>
-                    <td class="th-tablas">@ViewBag.Goleadores[i-1].NombreApellido</td>
-                    <td class="th-tablas">@ViewBag.Goleadores[i-1].Goles</td>
-                </tr>
-                }
-
-            </tbody>
-        </table>
     </div>
-</div>
 </div>
 <h3>Mejores jugadas</h3>
 <div class="row">
-    <div class="col-4">
+    <div class="col-md-4 col-sm-9">
         <div class="cuadTxtCont">
             <iframe width="100%" height="230vh" src="https://www.youtube.com/embed/BpiYAAXfVCU"
                 title="YouTube video player" frameborder="0"
@@ -59,7 +62,7 @@
             <p>&nbsp;</p>
         </div>
     </div>
-    <div class="col-4">
+    <div class="col-md-4 col-sm-9"">
         <div class="cuadTxtCont">
 
             <iframe width="100%" height="230vh" src="https://www.youtube.com/embed/wjUvn8xpYzo"
@@ -70,7 +73,7 @@
             <p>&nbsp;</p>
         </div>
     </div>
-    <div class="col-4">
+    <div class="col-md-4 col-sm-9"">
         <div class="cuadTxtCont">
 
             <iframe width="100%" height="230vh" src="https://www.youtube.com/embed/XCuRE7jToNg"
@@ -86,7 +89,3 @@
 
 
 </div>
-
-
-
-
