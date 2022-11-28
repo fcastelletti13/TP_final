@@ -7,7 +7,7 @@ using Dapper;
 public static class BD
 {
     /*LISTAR*/
-    private static string _connectionString = @"Server=localhost;DataBase=DBFutbol;Trusted_Connection=True";
+    private static string _connectionString = @"Server=DESKTOP-M15HFS0\SQLEXPRESS;DataBase=DBFutbol;Trusted_Connection=True";
 
     public static List<Equipo> ListarEquipos()
     {
@@ -44,10 +44,17 @@ public static class BD
         List<Post> ListaPosts = new List<Post>();
         using (SqlConnection bd = new SqlConnection(_connectionString))
         {
-            string sql = $"SELECT * FROM Posts ORDER BY Likes desc";
+            string sql = $"SELECT * FROM Posts";
             ListaPosts = bd.Query<Post>(sql).ToList();
         }
         return ListaPosts;
+    }
+    public static void AgregarPost(Post post){
+
+        string sql = $"Insert into Posts([TextoPost], [IdUsuario], [FechaCreacion]) VALUES ('{post.TextoPost}',{post.Usuario},@FechaCreacion)";
+        using (SqlConnection bd = new SqlConnection(_connectionString)){
+            bd.Execute(sql,new {FechaCreacion = post.FechaCreacion});
+        }
     }
 
     public static List<Partido> ListarPartidos()
@@ -79,5 +86,17 @@ public static class BD
             usuario = bd.QueryFirstOrDefault<Usuario>(sql);
         }
         return usuario;
+    }
+    public static int AgregarUsuario(Usuario usuario)
+    {
+        string sql = $"INSERT INTO Usuarios([Nombre], [Contraseña], [Foto]) VALUES('{usuario.Nombre}', '{usuario.Contraseña}', '{usuario.Foto}')";
+        int id = -1;
+        using (SqlConnection bd = new SqlConnection(_connectionString))
+        {
+            bd.Execute(sql);
+            sql = $"select top 1 IdUsuario from Usuarios where Nombre = '{usuario.Nombre}' order by IdUsuario desc";
+            id = bd.QueryFirstOrDefault<int>(sql);
+        }
+        return id;
     }
 }

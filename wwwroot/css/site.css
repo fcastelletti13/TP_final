@@ -11,123 +11,148 @@ html {
 html {
   position: relative;
   min-height: 100%;
-  
+
 }
 
 body {
   margin-bottom: 60px;
-  background-color: rgb(15, 15, 15) !important;
+  background-color: rgb(15, 15, 15);
 
 }
-table,td,th {
-	border: 1px solid beige;
+
+table,
+td,
+th {
+  border: 1px solid beige;
 }
+
 .cuadrado {
-  width: 90%;          
-  background: rgb(32, 32, 32);       
+  width: 90%;
+  background: rgb(32, 32, 32);
   border-right: 1px solid rgb(85, 85, 85);
   border-left: 1px solid rgb(85, 85, 85);
   margin-bottom: 3px;
 }
-h1,h2,h3,h4,h5,a{
-  color: aliceblue !important;
+
+.blanco{
+  color: aliceblue
 }
-#Perfil{
+h2,
+h3,
+h4,
+h5,
+a {
+  color: aliceblue;
+}
+
+#Perfil {
   width: 3%;
-  
+
 }
-.barra{
+
+.barra {
   background-color: rgb(34, 34, 34) !important;
 }
 
-.th-equipo{
+.th-equipo {
   border: 0;
 
 }
-table{
+
+table {
   border-radius: 10px;
 
-  }
-  tr{
-    border-radius: 10em;
-    
-  }
- 
-    .submenu{
-       display: none;
-       position: absolute;
-     }
-     
-     .linkprod:hover ~ .submenu {
-       display: block;
-     }
-     .th-tablas{
-      border-top-color: rgba(255, 0, 0, 0);
-      border-right-color: rgba(255, 0, 0, 0);
-      border-bottom-color: rgba(179, 179, 179, 0.493);
-      border-left-color: rgba(255, 0, 0, 0);   
-    }
-
-    .dropdown-item:hover
-    {
-      background-color: white;
-      color: black !important;
-    }
-    .th-mp{
-      border-top-color: rgba(255, 0, 0, 0);
-      border-right-color: rgba(255, 0, 0, 0);
-      border-bottom-color: rgba(179, 179, 179, 0.493);
-      border-left-color: rgba(255, 0, 0, 0);   
-    }
-    .persona{
-      color: aqua !important;
-    }
-
-    button{
-  color: inherit !important;
 }
+
+tr {
+  border-radius: 10em;
+
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+}
+
+.linkprod:hover~.submenu {
+  display: block;
+}
+
+.th-tablas {
+  border-top-color: rgba(255, 0, 0, 0);
+  border-right-color: rgba(255, 0, 0, 0);
+  border-bottom-color: rgba(179, 179, 179, 0.493);
+  border-left-color: rgba(255, 0, 0, 0);
+}
+
+.dropdown-item:hover {
+  background-color: white;
+  color: black !important;
+}
+
+.th-mp {
+  border-top-color: rgba(255, 0, 0, 0);
+  border-right-color: rgba(255, 0, 0, 0);
+  border-bottom-color: rgba(179, 179, 179, 0.493);
+  border-left-color: rgba(255, 0, 0, 0);
+}
+
+.persona {
+  color: aqua !important;
+}
+
 .h6-is{
   color: rgba(214, 214, 214, 0.767);
 }
 
 .cuadrado-form {
-  width: 30%;          
-  background: rgb(32, 32, 32);       
+  width: 30%;
+  background: rgb(32, 32, 32);
   margin-bottom: 3px;
 }
-.cuadrado-subir{
-  width: 90%;          
-  background: rgb(32, 32, 32);  
+
+.cuadrado-subir {
+  width: 90%;
+  background: rgb(32, 32, 32);
   border-bottom: 1px solid rgb(85, 85, 85);
   border-right: 1px solid rgb(85, 85, 85);
   border-left: 1px solid rgb(85, 85, 85);
   margin-bottom: 3px;
 }
-.form-subir{
+
+.form-subir {
   color: white;
   background-color: transparent !important;
-  
 }
-.comentario{
-  
+
+.comentario {
+
   border-bottom: 1px solid rgb(85, 85, 85);
 }
-.imgnom{
+
+.imgnom {
   display: flex;
   flex-direction: row;
 }
-.form-subir{
-  border-color: transparent;}
 
-.boton-sesion{
-  background-color:transparent;
+.form-subir {
   border-color: transparent;
 }
 
-#imgusuario{
-  height: 3rem;
+.boton-sesion {
+  background-color: transparent;
+  border-color: transparent;
 }
 
-#nombreusuario{
+#imgusuario {
+  height: 40px;
+  border-radius: 100%;
+  border: 3px solid;
+  border-color:coral;
+  cursor: pointer;
+}
+
+#nombreusuario {
+  text-align: center;
   color: coral;
 }

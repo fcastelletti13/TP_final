@@ -1,20 +1,57 @@
 @{
-    ViewData["Title"] = "Partidos";
+    ViewData["Title"] = "Registrarse";
 }
-<button class="d-none" id="btn-imgusuario" onclick="MostrarFotoUsuario('@ViewBag.Usuario.Foto', '@ViewBag.Usuario.Nombre')"></button>
+<button class="d-none" id="btn-imgusuario"
+    onclick="MostrarFotoUsuario('@ViewBag.Usuario.Foto', '@ViewBag.Usuario.Nombre', '@ViewBag.Usuario.idUsuario')"></button>
 
-<span>@ViewBag.mensaje</span>
-<form class="d-flex justify-content-center " method="post" enctype="multipart/form-data" action='@Url.Action("ValidarInicio")'>
-    <div class="row cuadrado-form">
-        <div class="col-8">
+
+<div class="row" style="margin-top: 1rem;"> @* cuadrado-form *@
+    <div class="col-5">
+        <form method="post" enctype="multipart/form-data" action='@Url.Action("ValidarInicio")'>
             <h6 class="h6-is">Ingrese nombre de usuario</h6>
-            <input type="text" name="nombre" placeholder="Ingrese nombre de usuario" size="30">
-            <h6 class="h6-is">Ingrese Contraseña</h6>
-            <input type="text" name="contrasena" placeholder="Ingrese contraseña" size="30">
-            <button type="submit">Iniciar Sesión</button>
-        </div>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="nombre"
+                placeholder="Ingrese nombre de usuario" required>
+
+            <div class="mb-3">
+                <br>
+                <h6 class="h6-is">Ingrese Contraseña</h6>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="contrasena"
+                    placeholder="Ingrese contraseña" required>
+            </div>
+
+            <button type="submit" class="btn btn-success">Iniciar Sesión</button>
+        </form>
     </div>
-    @if(ViewBag.mensaje ==  String.Empty){
-        <span>@ViewBag.mensaje</span>
-    }
-</form>
+    <div class="col-2">
+        @if (ViewBag.mensaje != String.Empty)
+            { 
+                <h6 class="h6-is">@Html.Raw(ViewBag.mensaje)</h6>
+            }
+    </div>
+    <div class="col-5">
+        <form method="post" enctype="multipart/form-data" action='@Url.Action("ValidarRegistro")'>
+            <h6 class="h6-is">Ingrese nombre de usuario</h6>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="nombre"
+                placeholder="Ingrese nombre de usuario" required>
+
+
+            <div class="mb-3">
+                <br>
+                <h6 class="h6-is">Ingrese Contraseña</h6>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="contrasena"
+                    placeholder="Ingrese contraseña" required>
+            </div>
+
+            <div class="mb-3">
+                <h6 class="h6-is">Repita su Contraseña</h6>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="contrasena2"
+                    placeholder="Ingrese contraseña" required>
+            </div>
+            <div class="mb-3">
+                <h6 class="h6-is">Ingrese su foto de perfil</h6>
+                <input class="form-control" type="file" id="formFile" name="MyFile">
+            </div>
+            <button type="submit" class="btn btn-success">Registrarse</button>
+        </form>
+    </div>
+</div>

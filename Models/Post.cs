@@ -10,16 +10,15 @@ public class Post
     private DateTime _fechaCreacion;
     private string _usuario;
     private string _foto;
-    private int _likes;
     public Post(){}
-    public Post(int idPost, string textoPost, DateTime fechaCreacion, string usuario, string foto,int likes)
+    public Post(int idPost, string textoPost, DateTime fechaCreacion, string usuario, string foto)
     {
         _idPost = idPost;
         _textoPost = textoPost;
         _fechaCreacion = fechaCreacion;
         _usuario = usuario;
-        _foto = _foto;
-        _likes = likes;
+        _foto = foto;
+        
     }
     public int IdPost
     {
@@ -46,9 +45,5 @@ public class Post
         get { return _foto; }
         set { _foto = value; }
     }
-    public int Likes
-    {
-        get { return _likes; }
-        set { _likes = value; }
-    }
+
 }

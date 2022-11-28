@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>@ViewData["Title"] - TP_final</title>
+  <title>@ViewData["Title"] - TP final</title>
   <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
   <link rel="stylesheet" href="~/TP_final.styles.css" asp-append-version="true" />
@@ -39,8 +39,7 @@
           </ul>
              <button class="boton-sesion">
               <div class="imgnom">
-                <a href='@Url.Action("IniciarSesion","Home")'><img id="imgusuario"></a>
-                <span id="nombreusuario"></span>
+                <a id="linkPerfil"><img id="imgusuario"></a> @* href='@Url.Action("IniciarSesion","Home")'  *@
               </div>
               
             </button>
@@ -66,6 +65,28 @@
       &copy; 2022 - TP_final - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
     </div>
   </footer>
+
+<form>
+    <div class="modal fade" id="modal-usuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="modal-title-usuario">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modal-body-usuario">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer" id="modal-footer-usuario">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <a class="btn btn-primary" href='@Url.Action("CerrarSesion")'>Cerrar Sesion</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
+
   <script src="~/lib/jquery/dist/jquery.min.js"></script>
   <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="~/js/site.js" asp-append-version="true"></script>

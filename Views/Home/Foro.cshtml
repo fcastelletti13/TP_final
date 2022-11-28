@@ -1,24 +1,32 @@
-<button class="d-none" id="btn-imgusuario" onclick="MostrarFotoUsuario('@ViewBag.Usuario.Foto', '@ViewBag.Usuario.Nombre')"></button>
+@{
+    ViewData["Title"] = "Foro";
+}
+<button class="d-none" id="btn-imgusuario"
+    onclick="MostrarFotoUsuario('@ViewBag.Usuario.Foto', '@ViewBag.Usuario.Nombre', '@ViewBag.Usuario.idUsuario')"></button>
 
-<form class="d-flex justify-content-center" method="post" action='@Url.Action()'>
+<form class="d-flex justify-content-center" method="post" enctype="multipart/form-data"
+    action='@Url.Action("AgregarPost")'>
     <div class="row cuadrado-subir">
         <div class="col-8">
-            <input type="text" class="form-subir" name="nombre" placeholder="¿Que querés subir?" size="30">
-            <input type="file" size="30">
-            <input type="submit" class="btn btn-primary" value="Aceptar">
+            <textarea class="form-control form-subir " rows="3" name="post.extoPost" placeholder="¿Que querés subir?" style="color: white;" required></textarea>
+            <input type="file" class="form-control" name="MyFile" required>
+            <input class="d-none"name="post.usuario" value="@ViewBag.Usuario.idUsuario">
+            <button type="submit" class="btn btn-primary">Subir</button>
         </div>
     </div>
 </form>
 <div class="d-flex justify-content-center">
     <div class="cuadrado">
-        <div class="comentario">
-           <div class="imgnom">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/River_plate_logo_2022.svg/1200px-River_plate_logo_2022.svg.png"
-                id="Perfil" />
-            <h2>GallinaAMorir</h2>
+        @foreach (Post item in ViewBag.ListaPosts)
+        {
+            <div class="comentario">
+                <div class="imgnom">
+                    <img src="/wwwroot/img/usuarios/@item.Foto" class="Perfil"/>
+                    <h2>@ViewBag.Usuario.Foto</h2>
+                    <h4>@item.TextoPost</h4>
+                </div>
             </div>
-            <h5>Con todo el respeto que les tengo son el peor equipo que vi en mi vida, fui ciego por un accidente
-                durante 6 meses y era mejor que ver esto</h5>
-        </div>
+        }
+
     </div>
 </div>
