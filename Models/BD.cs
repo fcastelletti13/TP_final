@@ -7,7 +7,7 @@ using Dapper;
 public static class BD
 {
     /*LISTAR*/
-    private static string _connectionString = @"Server=.;DataBase=DBFutbol;Trusted_Connection=True";
+    private static string _connectionString = @"Server=DESKTOP-M15HFS0\SQLEXPRESS;DataBase=DBFutbol;Trusted_Connection=True";
 
     public static List<Equipo> ListarEquipos()
     {

@@ -117,7 +117,7 @@ tr {
 }
 
 .form-subir {
-  color: white;
+  color: white !important;
   background-color: transparent !important;
 }
 
@@ -150,13 +150,15 @@ tr {
 .imgpost{
   height: 4rem;
   margin-left: 1rem;
-  margin-top: 0.3rem;
   margin-bottom: 1rem;
-  
   border-radius: 100%;
   border: 3px solid;
   border-color:coral;
   cursor: pointer;
+}
+
+.rowpost{
+  margin-top: 0.5rem;
 }
 
 #nombreusuario {
@@ -169,7 +171,7 @@ tr {
 }
 
 .eliminarpost{
-  margin-top: 0.3rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: flex-end;
 }
@@ -182,4 +184,8 @@ tr {
 .tituloposts{
   display: flex;
   justify-content: center;
+}
+
+.fechacreacionpost{
+  color: white !important;
 }

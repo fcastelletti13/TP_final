@@ -11,7 +11,7 @@
             @if (ViewBag.Usuario.idUsuario == -1)
             {
                 <h4 style="margin-top: 0.5rem;">Es necesario tener una cuenta para subir un post!</h4>
-                <textarea class="form-control form-subir " rows="3" name="post.TextoPost" placeholder="¿Que querés subir?"
+                <textarea class="form-control form-subir" rows="3" name="post.TextoPost" placeholder="¿Que querés subir?"
                 style="color: white;" disabled></textarea>
                 <div class="row" style="margin-top: 1rem;">
                     <div class="col-5">
@@ -25,11 +25,18 @@
             }
             else
             {
-                <textarea class="form-control form-subir " rows="3" name="post.TextoPost" placeholder="¿Que querés subir?"
+                <textarea style="margin-top: 0.5rem;" class="form-control form-subir " rows="3" name="post.TextoPost" placeholder="¿Que querés subir?"
                 style="color: white;" required></textarea>
-                <input type="file" class="form-control" name="MyFile" required>
                 <input class="d-none" name="post.IdUsuario" value="@ViewBag.Usuario.idUsuario">
-                <button type="submit" class="btn btn-primary subirpost">Subir</button>
+                <div class="row" style="margin-top: 1rem;">
+                    <div class="col-5">
+
+                        <input type="file" class="form-control" name="MyFile" required>
+                    </div>
+                    <div class="col-2">
+                        <button type="submit" class="btn btn-success subirpost">Publicar Post!</button>
+                    </div>
+                </div>
             }
         </div>
     </div>
@@ -37,33 +44,34 @@
 <h2 class="tituloposts">~ ~ ~ ~ ~ Posts ~ ~ ~ ~ ~</h2>
 <div class="d-flex justify-content-center" style="margin-top: 0.5rem;">
     <div class="cuadrado">
-        @foreach (Post item in ViewBag.ListaPosts)
+        @if (ViewBag.ListaPosts.Count > 0)
+        {
+            @foreach (Post item in ViewBag.ListaPosts)
         {
             <div class="comentario">
                 <div class="imgnom">
 
                 <div class="row">
 
-                    <div class="row">
+                    <div class="row rowpost">
                         <div class="col-1">
                             <img src="/img/usuarios/@item.Usuario.Foto" class="imgpost">
                         </div>
                         <div class="col-2">
                             <h2>@item.Usuario.Nombre</h2>
                         </div>
-                        <div class="col-3">
-                            <h4>@item.FechaCreacion</h4>
+                        <div class="col-7">
+                            <h6 class="fechacreacionpost">Fecha de creación: @item.FechaCreacion</h6>
                         </div>
-                        <div class="col-4"></div>
-                        <div class="col-2">
+                        <div class="col-2 eliminarpost">
                             <form method="post" enctype="multipart/form-data" action='@Url.Action("EliminarPost")'>
                                 @if (item.Usuario.idUsuario == ViewBag.usuario.idUsuario)
                                 {
-                                    <button type="submit" class="btn btn-danger eliminarpost">Eliminar</button>
+                                    <button type="submit" class="btn btn-danger">Eliminar</button>
                                 }
                                 else
                                 {
-                                    <button class="btn btn-danger eliminarpost" disabled> Eliminar</button>
+                                    <button class="btn btn-danger" disabled> Eliminar</button>
                                 }
                                 <input type="text" class="form-control d-none" id="exampleInputEmail1"
                                 aria-describedby="emailHelp" name="IdPost" value="@item.IdPost" required>
@@ -71,9 +79,9 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row" style="margin-bottom: 0.5rem;">
                         <div class="imgnom">
-                            <img src="/img/posts/@item.Foto" style="height: 13rem; width: auto; margin: auto; display: flex;">
+                            <img src="/img/posts/@item.Foto" style="height: 13rem; width: auto; margin: 0; display: flex;">
                             <h4 style="max-width: 100%; margin-left: 0.5rem;">@item.TextoPost</h4>
                         </div>
                             
@@ -84,6 +92,9 @@
 
                 </div>
             </div>
+        }
+        } else{
+            <h4 class="tituloposts" style="margin: 1rem;">No hay posts aún :(</h4>
         }
 
     </div>
