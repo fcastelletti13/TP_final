@@ -58,7 +58,11 @@ public class HomeController : Controller
     [HttpPost] public IActionResult AgregarPost(Post post, IFormFile MyFile)
     {
         post.Foto = MyFile.FileName;
-        using (var stream = System.IO.File.Create(this._environment.WebRootPath + @"\img\usuarios\" + MyFile.FileName)) MyFile.CopyTo(stream);
+        if(!Directory.Exists(this._environment.WebRootPath + @"\img\posts\"))
+        {
+            Directory.CreateDirectory(this._environment.WebRootPath + @"\img\posts");
+        }
+        using (var stream = System.IO.File.Create(this._environment.WebRootPath + @"\img\posts\" + MyFile.FileName)) MyFile.CopyTo(stream);
         post.FechaCreacion = DateTime.Now;
         BD.AgregarPost(post);
         return RedirectToAction("Foro");

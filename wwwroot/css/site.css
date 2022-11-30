@@ -29,8 +29,7 @@ th {
 .cuadrado {
   width: 90%;
   background: rgb(32, 32, 32);
-  border-right: 1px solid rgb(85, 85, 85);
-  border-left: 1px solid rgb(85, 85, 85);
+  border: 3px solid rgb(85, 85, 85);
   margin-bottom: 3px;
 }
 
@@ -47,7 +46,6 @@ a {
 
 #Perfil {
   width: 3%;
-
 }
 
 .barra {
@@ -114,9 +112,7 @@ tr {
 .cuadrado-subir {
   width: 90%;
   background: rgb(32, 32, 32);
-  border-bottom: 1px solid rgb(85, 85, 85);
-  border-right: 1px solid rgb(85, 85, 85);
-  border-left: 1px solid rgb(85, 85, 85);
+  border: 3px solid rgb(85, 85, 85);
   margin-bottom: 3px;
 }
 
@@ -152,10 +148,15 @@ tr {
   cursor: pointer;
 }
 .imgpost{
-  height: 36%;
+  height: 4rem;
+  margin-left: 1rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  
   border-radius: 100%;
-  border: 2px solid;
-  border-color:blue;
+  border: 3px solid;
+  border-color:coral;
+  cursor: pointer;
 }
 
 #nombreusuario {
@@ -165,4 +166,20 @@ tr {
 
 .table-center{
   vertical-align: middle;
+}
+
+.eliminarpost{
+  margin-top: 0.3rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.subirpost{
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.tituloposts{
+  display: flex;
+  justify-content: center;
 }

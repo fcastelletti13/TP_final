@@ -7,7 +7,7 @@ using Dapper;
 public static class BD
 {
     /*LISTAR*/
-    private static string _connectionString = @"Server=DESKTOP-M15HFS0\SQLEXPRESS;DataBase=DBFutbol;Trusted_Connection=True";
+    private static string _connectionString = @"Server=.;DataBase=DBFutbol;Trusted_Connection=True";
 
     public static List<Equipo> ListarEquipos()
     {
@@ -44,7 +44,7 @@ public static class BD
         List<Post> ListaPosts = new List<Post>();
         using (SqlConnection bd = new SqlConnection(_connectionString))
         {
-            string sql = $"SELECT * FROM Posts";
+            string sql = $"SELECT * FROM Posts Order by IdPost desc";
             ListaPosts = bd.Query<Post>(sql).ToList();
         }
         return ListaPosts;
